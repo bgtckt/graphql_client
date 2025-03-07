@@ -1,0 +1,82 @@
+#root {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.cards {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  padding: 12px;
+  border: 2px solid teal;
+  border-radius: 16px;
+}
+
+.userForm {
+  width: 360px;
+  margin-bottom: 24px;
+  padding: 12px;
+  border: 2px solid teal;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  height: 24px;
+}
+
+.submitButton {
+  max-width: fit-content;
+  margin-top: 12px;
+  padding: 4px 8px;
+  background-color: lightgreen;
+  color: white;
+}
+
+.deleteButton {
+  max-width: fit-content;
+  padding: 4px 8px;
+  background-color: tomato;
+  color: white;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-top: 16px;
+  padding-top: 8px;
+  border-top: 1px solid grey;
+}
+
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.postDeleteButton {
+  width: 24px;
+  height: 24px;
+  padding: 0 0 2px;
+  border-radius: 50%;
+  line-height: 0;
+}
+
+.addButton {
+  max-width: fit-content;
+  padding: 4px 8px;
+  background-color: lightgreen;
+  color: white;
+}
