@@ -4,22 +4,11 @@ import { GET_USERS } from './query/user';
 import { useMutation, useQuery } from '@apollo/client';
 import { CREATE_USER, DELETE_USER } from './mutation/user';
 import { CREATE_POST, DELETE_POST } from './mutation/post';
-
-type Post = {
-  id: number;
-  userId: number;
-  text: string;
-};
-
-type User = {
-  id: number;
-  name: string;
-  email: string;
-  posts?: Post[];
-}
+import { User } from './types';
+import UserNotification from './components/UserNotification';
 
 function App() {
-  const { loading, error, data, refetch: refetchUsers } = useQuery<{ getUsers: User[] }>(GET_USERS);
+  const { data, loading, error, refetch: refetchUsers } = useQuery<{ getUsers: User[] }>(GET_USERS);
   const [createUser] = useMutation(CREATE_USER);
   const [deleteUser] = useMutation(DELETE_USER);
   const [createPost] = useMutation(CREATE_POST);
@@ -132,6 +121,8 @@ function App() {
           ))}
         </div>
       )}
+
+      <UserNotification />
     </div>
   )
 }
