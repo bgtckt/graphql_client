@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 export const CREATE_POST = gql`
-  mutation createUser($createPostInput: CreatePostInput!) {
+  mutation createPost($createPostInput: CreatePostInput!) {
     createPost(createPostInput: $createPostInput) {
       id
       text

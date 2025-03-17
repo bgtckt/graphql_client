@@ -1,7 +1,29 @@
 #root {
+  position: relative;
   width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.toast {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 200px;
+  height: 40px;
+  padding: 12px;
+  border: 2px solid teal;
+}
+
+.toastCloseButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  padding: 0 0 2px;
+  border-radius: 50%;
+  line-height: 0;
 }
 
 .cards {
