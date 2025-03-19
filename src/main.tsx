@@ -8,12 +8,16 @@ import App from './App.tsx';
 import { getMainDefinition } from '@apollo/client/utilities';
 
 const httpLink = new HttpLink({
-  uri: 'http://localhost:4000/graphql', // HTTP-ссылка для запросов и мутаций
+  // HTTP-ссылка для запросов и мутаций
+  // http://localhost:4000/graphql
+  uri: 'http://109.73.206.183:8000/graphql',
 });
 
 const wsLink = new GraphQLWsLink(
+  // WebSocket-ссылка для подписок
+  // http://localhost:4000/graphql
   createClient({
-    url: 'ws://localhost:4000/graphql', // WebSocket-ссылка для подписок
+    url: 'ws://109.73.206.183:8000/graphql',
   }),
 );
 
