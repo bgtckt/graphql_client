@@ -10,14 +10,14 @@ import { getMainDefinition } from '@apollo/client/utilities';
 const httpLink = new HttpLink({
   // HTTP-ссылка для запросов и мутаций
   // http://localhost:4000/graphql
-  uri: 'http://109.73.206.183:8000/graphql',
+  uri: 'https://graphql-nestjs.ru/graphql',
 });
 
 const wsLink = new GraphQLWsLink(
   // WebSocket-ссылка для подписок
   // http://localhost:4000/graphql
   createClient({
-    url: 'ws://109.73.206.183:8000/graphql',
+    url: 'ws://graphql-nestjs.ru/graphql',
   }),
 );
 
